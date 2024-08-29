@@ -13,7 +13,7 @@ public class ResourceService {
 
     private final RestTemplate restTemplate;
     private final ResourceRepository resourceRepository;
-    private static final String TASK_SERVICE_URL = "http://task-service/api/tasks";
+    private static final String TASK_SERVICE_URL = "http://ServiceTask/api/tasks";
 
     public Resource createResource(Resource resource) {
         Boolean existTask = restTemplate.getForObject(TASK_SERVICE_URL + "/" + resource.getTaskId() + "/exist", Boolean.class);
